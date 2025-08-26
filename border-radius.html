@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        .radius {
+            width: 200px;
+            height: 200px;
+            background: #BADA55;
+            margin: 20px;
+        }
+        .rect {
+            width: 200px;
+            height: 100px;
+            background: #BADA55;
+            margin: 20px;
+        }
+        .radius1 {
+            border-radius: 50%;
+        }
+        /* 2个值 对角的圆角, 左上和右下  右上和左下 */
+        .radius2 {
+            border-radius: 25% 0;
+        }
+
+        /* 3个值 上左  (右上和左下)  右下*/
+        .radius3 {
+            border-radius: 10px 100px 40px;
+        }
+
+        /* 4个值 左上 右上 右下 左下  顺时针*/
+        .radius4 {
+            border-radius: 80px 100px 120px 140px;
+        }
+
+        /* 8个值 水平半径 / 垂直半径 */
+        .radius5 {
+            border-radius: 100px / 20px
+        }
+
+        /* 子弹头形状 */
+       .radius6 {
+        border-radius: 300px 0 0 300px/ 100px 0 0 100px;
+       }
+
+       /* 超过宽高的圆角的计算公式  药丸*/
+
+       /* F = min( W / (a + b) , W / (c + d), H / (e + f),  H / (g + h) ) */
+
+      .radius7 {
+        border-radius: 400px 0 0 400px/ 300px 0 0 300px;
+      }
+
+     /* 测试上面 */
+     .radius8 {
+        border-radius: 120px 0 0 120px/ 100px 0 0 100px;
+     }
+    </style>
+</head>
+<body>
+    <div class="radius radius1"></div>
+    <div class="radius radius2"></div>
+    <div class="radius radius3"></div>
+    <div class="radius radius4"></div>
+    <div class="radius radius5"></div>
+    <div class="rect radius6"></div>
+    <div class="rect radius7"></div>
+    <div class="radius radius7"></div>
+    <div class="rect radius8"></div>
+    <script>
+          // https://css-tricks.com/almanac/properties/b/border-radius/ css教程网站
+          // https://9elements.github.io/fancy-border-radius 圆角生成器
+          // https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator 圆角生成器
+    </script>
+</body>
+</html>
