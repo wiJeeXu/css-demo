@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+      .bg {
+        width: 300px;
+        height: 200px;
+        border: 10px dotted pink;
+        margin: 100px auto;
+        background-image: url("https://pic.rmb.bdstatic.com/bjh/240323/events/f720c24cec453ea80340504ff22a55429795.jpeg");
+        background-size: contain;
+        padding: 20px;
+        /* 宽 高 
+            只写一个值就代表 宽 auto
+            cover 覆盖会被裁剪
+            contain 包含如果大小不够会有空白
+            100% 100% 拉伸不按比例
+             */
+
+        background-repeat: no-repeat;
+        /* repeat-x 水平重复 repeat-y 垂直重复 no-repeat 不重复 repeat */
+
+        /* background-position: 50%; */
+        /* 水平  垂直 
+               百分比, 是指的元素 - 图片的 剩余空间计算
+            */
+
+        background-origin: border-box;
+
+        /* 参照物  
+              默认 padding-box 显示包含padding
+              content-box 只显示内容区域不包含padding和border
+              border-box 显示包含border
+            */
+
+        /* background-clip: content-box; */
+        -webkit-background-clip: text;
+        color: transparent;
+        /* 裁剪区域
+              默认 border-box 显示包含border
+              padding-box 显示包含padding
+              content-box 只显示内容区域不包含padding和border
+
+              text 文字背景裁剪
+              实验属性 webkit 前缀 字体颜色需要设置透明
+            */
+      }
+
+      .outset {
+        width: 400px;
+        height: 300px;
+        border: 10px solid pink;
+        margin: 50px auto;
+        overflow-y: auto;
+      }
+      .inset {
+        width: 200px;
+        height: 600px;
+        border: 10px solid blue;
+        margin: 30px;
+
+        color: red;
+        overflow-y: auto;
+        background: url("https://pic.rmb.bdstatic.com/bjh/240323/events/f720c24cec453ea80340504ff22a55429795.jpeg");
+        background-size: contain;
+        background-attachment: local;
+      }
+      
+
+      .box {
+        width: 300px;
+        height: 300px;
+        /* border: 10px solid #fff; */
+        /* margin: 50px auto; */
+        overflow-y: scroll;
+        background: pink;
+        position: relative;
+        
+      }
+      .text {
+        width: 100%;
+        height: 100%;
+
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        
+      }
+      .bcg {
+        width: 300px;
+        height: 300px;
+        background-size: 300px 300px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: left top;
+        
+      }
+      .bg1 {
+        background-image:  url("https://pic.rmb.bdstatic.com/bjh/240323/events/f720c24cec453ea80340504ff22a55429795.jpeg");
+      }
+      .bg2 {
+        background-image: url("https://pic.rmb.bdstatic.com/bjh/240323/events/f720c24cec453ea80340504ff22a55429795.jpeg");
+      }
+      .bg3 {
+        background-image: url("https://pic.rmb.bdstatic.com/bjh/240323/events/f720c24cec453ea80340504ff22a55429795.jpeg");
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* background-attachment
+      默认 scroll 背景固定
+      fixed 固定 相对于视口不动
+      local 相对于元素内容区域滚动
+      */
+    </style>
+  </head>
+  <body>
+    <!-- <div class="bg">
+      文字 默认 border-box 显示包含border padding-box 显示包含padding
+      content-box 只显示内容区域不包含padding和border
+    </div> -->
+
+    <div class="outset">
+      <div class="inset">
+        <p>
+          There were doors all round the hall, but they were all locked; and
+          when Alice had been all the way down one side and up the other, trying
+          every door, she walked sadly down the middle, wondering how she was
+          ever to get out again. There were doors all round the hall, but they
+          were all locked; and when Alice had been all the way down one side and
+          up the other, trying every door, she walked sadly down the middle,
+          wondering how she was ever to get out again. There were doors all
+          round the hall, but they were all locked; and when Alice had been all
+          the way down one side and up the other, trying every door, she walked
+          sadly down the middle, wondering how she was ever to get out again.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- <div class="box">
+        <div class="text">一</div>
+        <div class="bcg bg1"></div>
+        <div class="text">二</div>
+        <div class="bcg bg2"></div>
+        <div class="text">三</div>
+        <div class="bcg bg3"></div>
+    </div> -->
+  </body>
+</html>
