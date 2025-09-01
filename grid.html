@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid {
+            display: grid;
+            /* 
+            min-content 最小内容宽度,比如一个文字
+            max-content 最大内容宽度,比如一行文字
+
+            repeat(auto-fill, 100px) 假设容器宽度原先为500px, 增加到600 为自动增加1个网格
+            repeat(auto-fit, 100px) 假设容器宽度原先为500px, 增加到600 也不会增加网格, 不会占用空间，隐式网格
+
+            minmax(100px, 1fr) 最小100px, 最大1fr
+            fit-content(100px) 最小内容宽度, 假设内容宽度大于100px, 则为100px，否则为内容宽度
+             
+            容器使用
+            grid-template-areas: 
+                "header header header"
+                "sidebar main ads"
+                "footer footer footer";
+            子元素项目
+            grid-area: header;
+
+            grid-template: rows / columns;
+            grid-template: 
+            area row
+            area row
+            area row 
+            / column column column
+
+             grid-auto-columns grid-auto-rows
+                生成隐式网格
+                默认是auto
+            
+            grid-auto-flow
+                row 按行生成隐式网格
+                column 按列生成隐式网格
+                dense 尽可能填满空白区域 重密算法
+
+
+                grid 简写
+                grid: auto-flow dense rows / columns;
+
+
+                水平对齐
+                justify-items
+                
+                纵向对齐
+                align-items
+
+                综上对齐 不能调换顺序 
+                place-items: align-items justify-items;
+                
+
+                justify-content
+                align-content
+                place-content: align-content justify-content;
+                content 是网格在容器的位置
+
+
+                项目
+                起始位置 结束位置
+                grid-column-start
+                grid-column-end
+                grid-row-start
+                grid-row-end
+                grid-column: start / end
+                grid-row: start / end
+
+                span 2 跨越2个网格 追加2条线
+
+                网格命名
+                grid: [A-start] 100px [A-end B-start] 200px [B-end];
+                
+
+                grid-column-start: A;
+                grid-column-end: B;
+
+                justify-self
+                align-self
+            */
+
+            grid-template-columns: 300px fit-content(100px) 100px;
+            grid-template-rows: 20px 1fr;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>1</div>
+        <div>这是一</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
